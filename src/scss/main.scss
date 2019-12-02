@@ -1,1 +1,36 @@
-// TO DO: add basic styling and structure folders
+@charset 'UTF-8';
+
+// 1 - Settings, like color variables, font-family etc..
+@import "01-utilities/settings";
+@import "01-utilities/functions";
+@import "01-utilities/mixins";
+@import "01-utilities/extends";
+
+// import vendors here (e.g owlCarousel and others)
+@import "02-vendors/normalize"; // this should be here by default
+@import "02-vendors/perfect-scrollbar";
+@import "02-vendors//animate";
+
+@import "03-base/global";
+@import "03-base/typography";
+@import "03-base/helpers";
+
+@import "04-layout/header";
+@import "04-layout/navigation";
+@import "04-layout/hamburger-menu";
+@import "04-layout/mobile-menu";
+@import "04-layout/footer";
+@import "04-layout/sidebar";
+@import "04-layout/page-title";
+@import "04-layout/section";
+
+@import "05-components/buttons";
+@import "05-components/forms";
+@import "05-components/portfolio";
+@import "05-components/title";
+@import "05-components/social-list";
+@import "05-components/icon-block";
+
+@import "06-pages/blog";
+@import "06-pages/404";
+@import "06-pages/portfolio-single";

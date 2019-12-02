@@ -1,0 +1,53 @@
+$transition: cubic-bezier(0.25, 0.8, 0.25, 1);
+
+// Typography
+$main-font: "Cabin", Arial, Helvetica, sans-serif;
+$title-font: "Cabin", Arial, Helvetica, sans-serif;
+$alt-font: "Courgette", "Comic Sans MS", cursive;
+
+// Colors
+$body-color: #777;
+$primary-color: #e5386d;
+$heading-color: #090909;
+$link-color: #090909;
+$alt-color: #53d0ec;
+$gray-color: #9a9a9a;
+$dark-color: $heading-color;
+$light-color: #f7f7f7;
+$main-border-color: rgba(129, 129, 129, 0.2);
+
+// Social Colors
+// Usage e.g map-get($social, facebook)
+$social: (
+  facebook: #3b5998,
+  facebook-messenger: #0084ff,
+  google-plus: #dd4b39,
+  linkedin: #007bb6,
+  pinterest: #cb2027,
+  twitter: #00aced,
+  instagram: #3f729b,
+  vk: #45668e,
+  tumblr: #35465c,
+  xing: #cfdc00,
+  soundcloud: #f80,
+  dribbble: #ea4c89,
+  youtube: #e52d27,
+  youtube-play: #e52d27,
+  spotify: #7ab800,
+  behance: #1769ff,
+  deviantart: #4e6252,
+  vimeo: #1ab7ea,
+  flickr: #0063dc,
+  rss: #f26522,
+  whatsapp: #25d366,
+  twitch: #6441a5,
+  fivehundred: #0099e5,
+  email: $primary-color,
+  bandcamp: #629aa9,
+  github: #4078c0,
+  codepen: #fcd000,
+  telegram: #0088cc
+);
+
+$selection-background: $dark-color; 
+$selection-color: #fff;

@@ -1,26 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
 
-    <link rel="stylesheet" href="styles/bootstrap.css">
-    <link rel="stylesheet" href="styles/main.css">
-</head>
-<body>
-    <h3>it works perfectly good</h3>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/elegant-font/style.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="styles/bootstrap.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-nav-wrapper">
+      <div class="mobile-menu-inner">
+        <ul class="mobile-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li class="has-sub"><a href="#">Sample Page <i class="sub-icon fa fa-angle-down"></i></a>
+            <ul class="sub-menu">
+              <li class="has-sub"><a href="#">Submenu <i class="sub-icon fa fa-angle-down"></i></a>
+                <ul class="sub-menu">
+                  <li><a href="#">Level 3</a></li>
+                  <li><a href="#">Level 3</a></li>
+                  <li><a href="#">Level 3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Submenu</a></li>
+              <li><a href="#">Submenu</a></li>
+              <li><a href="#">Submenu</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container expanded">
+        <div class="header-wrap">
+          <div class="header-logo">
+              <img src="images/logo.svg" alt="WoodMart" style="max-width: 110px;">
+          </div>
+          <div class="header-nav">
+              <ul class="main-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Works</a></li>
+                <li class="menu-item-has-children"><a href="#">Pages</a>
+                  <ul class="sub-menu">
+                    <li><a href="#">About me</a></li>
+                    <li><a href="#">The Team</a></li>
+                    <li class="menu-item-has-children"><a href="#">Welcome Themes</a>
+                      <ul class="sub-menu">
+                        <li><a href="#">Submenu</a></li>
+                        <li><a href="#">Submenu</a></li>
+                        <li><a href="#">Submenu</a></li>
+                        <li><a href="#">Submenu</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">404 Page</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Features</a></li>
+              </ul>    
+          </div>
+          <div class="header-widgets">
+            <ul class="right-menu">
+              <li class="menu-item menu-search">
+                <a href="#" id="menu-search-btn">
+                  <i class="icon_search"></i>
+                </a>
+              </li>
+              <li class="menu-item menu-toggle-sidebar">
+                <a href="#" class="menu-bar" id="menu-toggle-sidebar">
+                  <span class="hamburger"></span>
+                </a>
+              </li>
+              <li class="menu-item menu-mobile-nav">
+                <a href="#" class="menu-bar" id="menu-show-mobile-nav">
+                  <span class="hamburger"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- /Header -->
 
     <div class="container">
-        <div class="row">
-            <div class="col-4">
-                <h2>It Works Perfect</h2>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis natus sunt minima architecto expedita a enim aspernatur atque praesentium placeat dolorum laborum saepe assumenda adipisci corrupti explicabo recusandae, rerum similique.
-                <a href="#" class="btn btn-default">Continue Reading</a>
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Welcome to Wonderland <a href="#">Here</a></h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aspernatur in adipisci tempore sint perferendis nesciunt saepe, cumque quia est, placeat commodi explicabo amet esse provident eos qui a dolore magni ab voluptas voluptatem. Iure nostrum similique dolores provident temporibus atque numquam dolore cum corporis minima sint, recusandae cumque. Tempore, ex totam incidunt illum tenetur vitae asperiores voluptates eos fugiat doloremque laudantium sapiente est. Fugiat amet dicta cum reiciendis, facilis sint molestiae non atque nostrum temporibus maxime incidunt dolor iste culpa. Accusantium hic dolorum dolorem veniam, qui ducimus laboriosam beatae, placeat at autem modi, voluptatem culpa eligendi commodi alias esse.</p>
+          <blockquote>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati ea quas cumque consectetur repellat corrupti libero tempora minus iste.</p>
+            <cite>Esmet Hajrizi</cite>
+          </blockquote>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id dolor veritatis doloremque fugiat ex natus in dicta ducimus beatae deleniti error, laborum et quasi sit earum debitis. Dicta harum totam quod commodi iste iure eos doloremque exercitationem quibusdam sequi obcaecati natus id ullam nesciunt consequatur soluta, alias rerum, quia repellat sed hic maiores atque. Voluptatem architecto consequuntur excepturi repellendus eius quibusdam veritatis porro, enim perferendis aliquam nihil debitis facere. Animi quos corporis porro voluptatum quidem odio distinctio architecto culpa perspiciatis accusamus, ipsa nesciunt, suscipit dolorem esse itaque, quia doloremque. Commodi alias voluptates vero consectetur perferendis, sunt quia obcaecati eveniet repellendus.</p>
+          <div class="row">
+              <div class="col-4">
+                <div class="animate-item tsFadeInUp">
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit temporibus numquam eos optio eveniet nemo rem harum quibusdam! Voluptas maiores libero iusto pariatur consequatur reprehenderit illum, non deleniti. Iste, autem.</p>
+                </div>
+              </div>
+              <div class="col-4">
+                  <div class="animate-item tsFadeInUp" data-wow-delay="0.2s">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit temporibus numquam eos optio eveniet nemo rem harum quibusdam! Voluptas maiores libero iusto pariatur consequatur reprehenderit illum, non deleniti. Iste, autem.</p>
+                  </div>
+                </div>
+                <div class="col-4">
+                    <div class="animate-item tsFadeInUp" data-wow-delay="0.4s">
+                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit temporibus numquam eos optio eveniet nemo rem harum quibusdam! Voluptas maiores libero iusto pariatur consequatur reprehenderit illum, non deleniti. Iste, autem.</p>
+                    </div>
+                  </div>
             </div>
-            
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quisquam necessitatibus porro pariatur, repellendus dolorum nisi neque reiciendis possimus ipsam veritatis quasi laboriosam voluptatum totam atque magnam quis ab nihil optio eaque suscipit recusandae quam. Sapiente animi, aliquam odit aspernatur aliquid cum enim molestias officia iste facere tenetur dignissimos, itaque, assumenda odio minus consequatur sit rerum! Cumque, sit. Porro voluptate quis unde vel vero aut molestias, inventore expedita odio natus iusto labore quos doloribus alias nihil perspiciatis. Neque explicabo reprehenderit dolores consectetur vitae odio, voluptatibus eaque modi quasi rem. Temporibus quam perspiciatis maxime laboriosam. Nemo id odio quibusdam voluptatibus? Explicabo, vitae beatae quasi suscipit, accusamus possimus quidem rem nam dicta, perferendis exercitationem! Error, sunt alias! Architecto magni eius natus doloremque corrupti quo sequi ut minus, nihil officia necessitatibus ullam perspiciatis quam at repudiandae distinctio impedit provident soluta aspernatur. Illum repudiandae animi est nam obcaecati saepe, repellendus.</p>
         </div>
+      </div>
+      
     </div>
-</body>
+
+
+    <!-- Scripts -->
+    <script src="scripts/vendors/jquery-3.4.1.min.js"></script>
+    <script src="scripts/vendors/jquery.hoverIntent.min.js"></script>
+    <script src="scripts/vendors/perfect-scrollbar.min.js"></script>
+    <script src="scripts/vendors/jquery.easing.min.js"></script>
+    <script src="scripts/vendors/wow.min.js"></script>
+    <script src="scripts/main.js"></script>
+
+  </body>
 </html>

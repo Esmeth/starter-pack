@@ -20,7 +20,9 @@
     sass = require("gulp-sass"),
     postcss = require("gulp-postcss"),
     cssnano = require("gulp-cssnano"),
+    concat = require("gulp-concat"),
     rename = require("gulp-rename"),
+    uglify = require("gulp-uglify"),
     browsersync = require("browser-sync").create();
 
   // Clean Task
@@ -54,7 +56,7 @@
   // CSS Task
   const cssConfig = {
     src: dir.src + "scss/*.scss",
-    watch: dir.src + "scss/**/*",
+    watch: dir.src + "scss/**/*.scss",
     build: dir.build + "styles/",
     sassOpts: {
       outputStyle: "nested",
@@ -88,19 +90,29 @@
 
   // JS Task
   const jsConfig = {
-    src: dir.src + "scripts/**/*.js",
+    src: dir.src + "scripts/modules/*.js",
     build: dir.build + "scripts",
-    watch: dir.src + "scripts/**/*.js"
+    watch: dir.src + "scripts/modules/*.js"
   };
 
   function scripts() {
     return gulp
       .src(jsConfig.src)
+      .pipe(concat("main.js"))
+      .pipe(gulp.dest(jsConfig.build))
+      .pipe(uglify())
+      .pipe(rename({ suffix: ".min" }))
       .pipe(gulp.dest(jsConfig.build))
       .pipe(browsersync ? browsersync.reload({ stream: true }) : noop());
   }
 
-  exports.scripts = scripts;
+  function scriptVendors() {
+    return gulp
+      .src(dir.src + "scripts/vendors/*.js")
+      .pipe(gulp.dest(dir.build + "scripts/vendors"));
+  }
+
+  exports.scripts = gulp.series(scripts, scriptVendors);
 
   // HTML Task
   const htmlConfig = {
@@ -117,6 +129,18 @@
   }
 
   exports.html = html;
+
+  // Copying fonts
+  const fontsConfig = {
+    src: dir.src + "fonts/**/*",
+    build: dir.build + "fonts"
+  };
+
+  function fonts() {
+    return gulp.src(fontsConfig.src).pipe(gulp.dest(fontsConfig.build));
+  }
+
+  exports.fonts = fonts;
 
   // Scripts Task
 
@@ -157,6 +181,7 @@
     exports.css,
     exports.html,
     exports.scripts,
+    exports.fonts,
     watch,
     server
   );
